@@ -20,10 +20,18 @@
     "paths": {
       "@/*": ["./*"],
       "@app/*": ["./app/*"],
-      "@components/*": ["./app/components/*"],
-      "@data/*": ["./app/data/*"]
+      "@components/*": ["./app/_components/*"],
+      "@data/*": ["./app/_data/*"],
+      "@lib/*": ["./app/_lib/*"],
+      "@providers/*": ["./app/_providers/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/_providers/ThemeContextProvider.jsx"
+  ],
   "exclude": ["node_modules"]
 }
