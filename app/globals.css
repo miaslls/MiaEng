@@ -1,3 +1,5 @@
+@import '~@flaticon/flaticon-uicons/css/all/all';
+
 :root {
   color-scheme: light;
 
@@ -13,6 +15,8 @@
 
   --layout-padding-desktop: 10%;
   --layout-padding-mobile: 5%;
+
+  --icon-size-default: 1.25rem;
 
   --bg-color: var(--light-color);
   --fg-color: var(--dark-color);
@@ -129,6 +133,18 @@ a {
 p.default {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.icon-container {
+  width: var(--icon-size-default);
+  height: var(--icon-size-default);
+  font-size: var(--icon-size-default);
+}
+
+.clippable {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 📌 @media */
