@@ -1,13 +1,29 @@
 :root {
-  --dark-color: #201623;
-  --light-color: #f6f6f3;
-  --accent-default: #34b0db;
+  color-scheme: light;
+
+  --dark-color: #191c29;
+  --light-color: #ede5e6;
+  --accent-color: #663399; /* rebeccapurple */
+  --accent-light: #8797af;
+  --accent-dark: #4964b3;
+
+  --sucess: #548a67;
+  --warning: #d27a2f;
+  --danger: #f44336;
 
   --bg-color: var(--light-color);
   --fg-color: var(--dark-color);
+  --accent-bg-contrast: var(--accent-dark);
+  --accent-fg-contrast: var(--accent-light);
+}
 
-  --accent-light: #6694a9;
-  --accent-dark: #b23c58;
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-color: var(--dark-color);
+  --fg-color: var(--light-color);
+  --accent-bg-contrast: var(--accent-light);
+  --accent-fg-contrast: var(--accent-dark);
 }
 
 html * {
@@ -77,16 +93,18 @@ h1 {
 h2 {
   font-size: 1.75rem;
   font-weight: 400;
+  opacity: 0.8;
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 400;
+  opacity: 0.6;
 }
 
 a {
   font-family: var(--font-outfit);
-  color: var(--accent-light);
+  color: var(--accent-bg-contrast);
 }
 
 p.default {

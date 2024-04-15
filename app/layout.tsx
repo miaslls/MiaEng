@@ -1,10 +1,25 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import './globals.css';
+
+import dynamic from 'next/dynamic';
+import type { Metadata, Viewport } from 'next';
 import { Work_Sans, Outfit } from 'next/font/google';
+import { getTheme } from '@lib/theme';
+
+const ThemeProvider = dynamic(() => import('@providers/ThemeContextProvider'), {
+  ssr: false,
+});
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#663399' },
+    { media: '(prefers-color-scheme: dark)', color: '#663399' },
+  ],
+  colorScheme: 'light dark',
+};
 
 export const metadata: Metadata = {
-  title: "MiaEng",
-  description: "",
+  title: 'MiaEng',
+  description: '',
   keywords: [],
   authors: [
     {
@@ -35,7 +50,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${work_sans.variable} ${outfit.variable}`}>
-      <body>{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: getTheme }} />
+      </head>
+
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
