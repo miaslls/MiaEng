@@ -5,6 +5,11 @@ import type { Metadata, Viewport } from 'next';
 import { Work_Sans, Outfit } from 'next/font/google';
 import { getTheme } from '@lib/theme';
 
+const DeviceProvider = dynamic(
+  () => import('@providers/DeviceContextProvider'),
+  { ssr: false },
+);
+
 const ThemeProvider = dynamic(() => import('@providers/ThemeContextProvider'), {
   ssr: false,
 });
@@ -55,11 +60,13 @@ export default function RootLayout({
       </head>
 
       <body>
-        <ThemeProvider>
-          <div className="layout_container">
-            <div className="child_container">{children}</div>
-          </div>
-        </ThemeProvider>
+        <DeviceProvider>
+          <ThemeProvider>
+            <div className="layout_container">
+              <div className="child_container">{children}</div>
+            </div>
+          </ThemeProvider>
+        </DeviceProvider>
       </body>
     </html>
   );
