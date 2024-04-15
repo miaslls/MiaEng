@@ -55,7 +55,11 @@ export default function RootLayout({
       </head>
 
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <div className="layout_container">
+            <div className="child_container">{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
