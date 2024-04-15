@@ -3,8 +3,17 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "",
+  title: "MiaEng",
   description: "",
+  keywords: [],
+  authors: [
+    {
+      name: 'Camila Salles',
+      url: new URL('https://github.com/miaslls'),
+    },
+  ],
+  generator: 'Next.js',
+  referrer: 'no-referrer',
 };
 
 export default function RootLayout({
