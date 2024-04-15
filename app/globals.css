@@ -1,0 +1,115 @@
+:root {
+  --dark-color: #201623;
+  --light-color: #f6f6f3;
+  --accent-default: #34b0db;
+
+  --bg-color: var(--light-color);
+  --fg-color: var(--dark-color);
+
+  --accent-light: #6694a9;
+  --accent-dark: #b23c58;
+}
+
+html * {
+  outline: none;
+  box-sizing: border-box;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+button,
+input,
+textarea,
+ul,
+a {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  appearance: none;
+  list-style: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background: var(--bg-color);
+  color: var(--fg-color);
+  font-family: var(--font-work_sans);
+  font-size: 1.125rem;
+  font-weight: 400;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-outfit);
+  user-select: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+a {
+  font-family: var(--font-outfit);
+  color: var(--accent-light);
+}
+
+p.default {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+/* 📌 @media */
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* 📌 mobile && tablet */
+@media (max-width: 1120px) {
+}
+
+/* 📌 mobile */
+@media (max-width: 700px) {
+}
+
+/* 📌 tablet */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
