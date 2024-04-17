@@ -5,7 +5,7 @@ import type { Metadata, Viewport } from 'next';
 import { Work_Sans, Outfit } from 'next/font/google';
 import { getTheme } from '@lib/theme';
 
-import Header from '@components/Header';
+import Header from '@components/header/Header';
 
 const DeviceProvider = dynamic(
   () => import('@providers/DeviceContextProvider'),

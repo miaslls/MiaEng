@@ -40,6 +40,8 @@ html * {
   margin: 0;
   padding: 0;
   border: 0;
+
+  transition: background 200ms;
 }
 
 button,

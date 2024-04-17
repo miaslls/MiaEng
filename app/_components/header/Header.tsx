@@ -1,4 +1,9 @@
 import styles from './Header.module.css';
+import dynamic from 'next/dynamic';
+
+const ToggleThemeButton = dynamic(() => import('./ToggleThemeButton'), {
+  ssr: false,
+});
 
 export default function Header() {
   return (
@@ -11,9 +16,7 @@ export default function Header() {
         <span>MiaEng</span> &nbsp; tools & games
       </p>
 
-      <div className="icon-container">
-        <i className="fi fi-ts-bulb"></i>
-      </div>
+      <ToggleThemeButton />
     </div>
   );
 }
