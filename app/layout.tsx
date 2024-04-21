@@ -17,6 +17,10 @@ const ThemeProvider = dynamic(() => import('@providers/ThemeContextProvider'), {
   ssr: false,
 });
 
+const MenuProvider = dynamic(() => import('@providers/MenuContextProvider'), {
+  ssr: false,
+});
+
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#663399' },
@@ -65,11 +69,13 @@ export default function RootLayout({
       <body>
         <DeviceProvider>
           <ThemeProvider>
-            <div className="layout_container">
-              <Header />
-              {/* <HamburgerMenu /> */}
-              <div className="child_container">{children}</div>
-            </div>
+            <MenuProvider>
+              <div className="layout_container">
+                <Header />
+                {/* <HamburgerMenu /> */}
+                <div className="child_container">{children}</div>
+              </div>
+            </MenuProvider>
           </ThemeProvider>
         </DeviceProvider>
       </body>
