@@ -1,6 +1,5 @@
 'use client';
 
-import styles from './ToggleThemeButton.module.css';
 import { useTheme } from '@/app/_providers/ThemeContextProvider';
 
 export default function ToggleThemeButton() {
@@ -8,7 +7,7 @@ export default function ToggleThemeButton() {
   const isDarkTheme = theme === 'dark';
 
   return (
-    <button className={styles.button} onClick={toggleTheme}>
+    <button className="icon-button" onClick={toggleTheme}>
       <div className="icon-container">
         <i
           className={`fi fi-ts-${isDarkTheme ? 'bulb' : 'lightbulb-slash'}`}
