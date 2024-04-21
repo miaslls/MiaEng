@@ -40,10 +40,7 @@ export default function HamburgerMenu() {
 
   return (
     <Overlay isOpen={isMenuOpen} close={closeMenu}>
-      <div
-        className={`${styles.container} ${isDarkTheme ? styles.dark : ''}`}
-        onClick={handleClick}
-      >
+      <div className={styles.container} onClick={handleClick}>
         <button className={`icon-button ${styles.close}`} onClick={handleClick}>
           <div className="icon-container">
             <i className="fi fi-rs-cross-small"></i>
