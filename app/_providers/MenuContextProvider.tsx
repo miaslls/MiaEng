@@ -5,7 +5,7 @@ import { useSessionStorage } from '@lib/storage';
 
 type MenuContextState = {
   isMenuOpen: boolean;
-  handleToggleMenu(): void;
+  handleToggleMenu: () => void;
 };
 
 export const MenuContext = createContext<MenuContextState | null>(null);
