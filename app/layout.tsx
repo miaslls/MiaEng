@@ -6,6 +6,7 @@ import { Work_Sans, Outfit } from 'next/font/google';
 import { getTheme } from '@lib/theme';
 
 import Header from '@components/header/Header';
+import HamburgerMenu from './_components/menu/HamburgerMenu';
 
 const DeviceProvider = dynamic(
   () => import('@providers/DeviceContextProvider'),
@@ -66,6 +67,7 @@ export default function RootLayout({
           <ThemeProvider>
             <div className="layout_container">
               <Header />
+              <HamburgerMenu />
               <div className="child_container">{children}</div>
             </div>
           </ThemeProvider>

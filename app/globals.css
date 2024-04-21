@@ -15,13 +15,14 @@
 
   --layout-padding-desktop: 10%;
   --layout-padding-mobile: 5%;
-
   --icon-size-default: 1.25rem;
 
   --bg-color: var(--light-color);
   --fg-color: var(--dark-color);
   --accent-bg-contrast: var(--accent-dark);
   --accent-fg-contrast: var(--accent-light);
+
+  --menu-bg: color-mix(in srgb, var(--accent-color) 75%, var(--bg-color));
 }
 
 :root[data-theme='dark'] {
