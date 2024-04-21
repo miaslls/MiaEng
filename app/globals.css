@@ -22,7 +22,7 @@
   --accent-bg-contrast: var(--accent-dark);
   --accent-fg-contrast: var(--accent-light);
 
-  --menu-bg: color-mix(in srgb, var(--accent-color) 75%, var(--bg-color));
+  --menu-bg: color-mix(in srgb, var(--accent-color) 25%, var(--bg-color));
 }
 
 :root[data-theme='dark'] {
@@ -151,6 +151,12 @@ p.default {
   align-items: center;
   justify-content: center;
   transition: opacity 200ms ease-in;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transition: opacity 1s;
 }
 
 .clippable {

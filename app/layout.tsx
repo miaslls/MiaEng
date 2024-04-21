@@ -72,7 +72,7 @@ export default function RootLayout({
             <MenuProvider>
               <div className="layout_container">
                 <Header />
-                {/* <HamburgerMenu /> */}
+                <HamburgerMenu />
                 <div className="child_container">{children}</div>
               </div>
             </MenuProvider>
