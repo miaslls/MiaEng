@@ -84,7 +84,9 @@ export default function HamburgerMenu() {
           <h3 className="title clippable">
             <span>MiaEng</span> &nbsp; tools & games
           </h3>
-          <p>© {new Date().getFullYear()} Camila Salles</p>
+          <p className="clippable">
+            © {new Date().getFullYear()} Camila Salles
+          </p>
         </footer>
       </div>
     </Overlay>
