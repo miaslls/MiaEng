@@ -1,9 +1,7 @@
 'use client';
 
 import styles from './HamburgerMenu.module.css';
-
 import { useMenu } from '@providers/MenuContextProvider';
-import { useTheme } from '@providers/ThemeContextProvider';
 
 type OverlayProps = {
   children: React.ReactNode;
@@ -24,9 +22,6 @@ function Overlay({ children, isOpen, close }: OverlayProps) {
 
 export default function HamburgerMenu() {
   const { isMenuOpen, handleToggleMenu: closeMenu } = useMenu();
-
-  const { theme } = useTheme();
-  const isDarkTheme = theme === 'dark';
 
   function handleClick(
     e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
