@@ -6,18 +6,12 @@ import { Work_Sans, Outfit } from 'next/font/google';
 import { getTheme } from '@lib/theme';
 
 import Header from '@components/header/Header';
-import HamburgerMenu from './_components/menu/HamburgerMenu';
-
-const DeviceProvider = dynamic(
-  () => import('@providers/DeviceContextProvider'),
-  { ssr: false },
-);
+import HamburgerMenu from '@components/menu/HamburgerMenu';
+import Footer from '@components/footer/Footer';
+import DeviceProvider from '@providers/DeviceContextProvider';
+import MenuProvider from '@providers/MenuContextProvider';
 
 const ThemeProvider = dynamic(() => import('@providers/ThemeContextProvider'), {
-  ssr: false,
-});
-
-const MenuProvider = dynamic(() => import('@providers/MenuContextProvider'), {
   ssr: false,
 });
 
@@ -70,10 +64,11 @@ export default function RootLayout({
         <DeviceProvider>
           <ThemeProvider>
             <MenuProvider>
-              <div className="layout_container">
+              <div className="layout-container">
                 <Header />
                 <HamburgerMenu />
-                <div className="child_container">{children}</div>
+                <div className="child-container">{children}</div>
+                <Footer />
               </div>
             </MenuProvider>
           </ThemeProvider>
