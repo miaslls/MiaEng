@@ -80,7 +80,7 @@ body {
   height: 100dvh;
   background: var(--bg-color);
   color: var(--fg-color);
-  font-family: var(--font-work_sans);
+  font-family: var(--font-worksans);
   font-size: 1.125rem;
   font-weight: 400;
   overflow: auto;
@@ -155,7 +155,7 @@ p.default {
 
 .disabled-button {
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: default;
   transition: opacity 1s;
 }
 

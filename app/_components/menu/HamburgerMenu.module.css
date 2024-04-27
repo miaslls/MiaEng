@@ -16,7 +16,7 @@
 .container {
   width: 30rem;
   height: 100%;
-  padding: 2rem 2rem 2rem 1.5rem;
+  padding: 2rem 3rem;
   background: var(--menu-bg);
   display: flex;
   flex-direction: column;
@@ -29,10 +29,45 @@ button.close {
   align-self: flex-end;
 }
 
+.title {
+  font-weight: 200;
+}
+
+.title span {
+  font-weight: 400;
+}
+
+.menu-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 10%;
+  gap: 2.5rem;
+}
+
+.menu-nav h2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-nav a {
+  font-family: var(--font-worksans);
+  color: color-mix(in srgb, var(--accent-bg-contrast) 85%, var(--fg-color));
+}
+
 /* 📌 mobile */
 
 @media (max-width: 700px) {
   .container {
-    max-width: 95%;
+    width: 95%;
+    padding: 2rem;
+  }
+
+  .menu-nav {
+    padding-right: 15%;
   }
 }

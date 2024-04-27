@@ -46,6 +46,51 @@ export default function HamburgerMenu() {
             <i className="fi fi-rs-cross-small"></i>
           </div>
         </button>
+
+        <nav className={styles['menu-nav']}>
+          <ul>
+            <h2>
+              <span>TOOLS</span>
+              <span className="icon-container">
+                <i className="fi fi-ss-angle-double-small-right"></i>
+              </span>
+            </h2>
+            <li>
+              <a>Lorem ipsum</a>
+            </li>
+            <li>
+              <a>Dolor sit</a>
+            </li>
+            <li>
+              <a>Amet</a>
+            </li>
+          </ul>
+
+          <ul>
+            <h2>
+              <span>GAMES</span>
+              <span className="icon-container">
+                <i className="fi fi-ss-angle-double-small-right"></i>
+              </span>
+            </h2>
+            <li>
+              <a>Lorem ipsum</a>
+            </li>
+            <li>
+              <a>Dolor sit</a>
+            </li>
+            <li>
+              <a>Amet</a>
+            </li>
+          </ul>
+        </nav>
+
+        <footer className={styles['menu-footer']}>
+          <h3 className={`${styles.title} clippable`}>
+            <span>MiaEng</span> &nbsp; tools & games
+          </h3>
+          <p>© {new Date().getFullYear()} Camila Salles</p>
+        </footer>
       </div>
     </Overlay>
   );

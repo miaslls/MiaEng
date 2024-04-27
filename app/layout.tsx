@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'MiaEng',
+  title: 'MiaEng - tools & games',
   description: '',
   keywords: [],
   authors: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 const work_sans = Work_Sans({
   subsets: ['latin'],
-  variable: '--font-work_sans',
+  variable: '--font-worksans',
   display: 'swap',
 });
 
