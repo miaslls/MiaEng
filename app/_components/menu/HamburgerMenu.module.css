@@ -52,7 +52,6 @@ button.close {
 }
 
 /* 📌 mobile */
-
 @media (max-width: 700px) {
   .container {
     width: 95%;

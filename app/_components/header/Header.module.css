@@ -12,6 +12,7 @@
   flex: 1;
 }
 
+/* 📌 mobile && tablet */
 @media (max-width: 1120px) {
   .container {
     padding: 1rem var(--layout-padding-mobile);
