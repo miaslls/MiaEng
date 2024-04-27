@@ -138,6 +138,15 @@ p.default {
   line-height: 1.75rem;
 }
 
+.title {
+  font-family: var(--font-outfit);
+  font-weight: 200;
+}
+
+.title span {
+  font-weight: 400;
+}
+
 .icon-container {
   width: var(--icon-size-default);
   height: var(--icon-size-default);

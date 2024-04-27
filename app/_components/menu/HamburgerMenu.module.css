@@ -29,14 +29,6 @@ button.close {
   align-self: flex-end;
 }
 
-.title {
-  font-weight: 200;
-}
-
-.title span {
-  font-weight: 400;
-}
-
 .menu-nav {
   width: 100%;
   display: flex;

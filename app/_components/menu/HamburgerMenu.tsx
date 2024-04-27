@@ -81,7 +81,7 @@ export default function HamburgerMenu() {
         </nav>
 
         <footer className={styles['menu-footer']}>
-          <h3 className={`${styles.title} clippable`}>
+          <h3 className="title clippable">
             <span>MiaEng</span> &nbsp; tools & games
           </h3>
           <p>© {new Date().getFullYear()} Camila Salles</p>

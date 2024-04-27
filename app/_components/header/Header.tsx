@@ -23,7 +23,7 @@ export default function Header() {
         </div>
       </button>
 
-      <p className={`${styles.title} clippable`}>
+      <p className={`${styles.title} title clippable`}>
         <span>MiaEng</span> &nbsp; tools & games
       </p>
 

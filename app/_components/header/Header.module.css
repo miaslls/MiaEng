@@ -10,12 +10,6 @@
 
 .title {
   flex: 1;
-  font-family: var(--font-outfit);
-  font-weight: 200;
-}
-
-.title span {
-  font-weight: 400;
 }
 
 @media (max-width: 1120px) {
