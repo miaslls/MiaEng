@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type Device = 'desktop' | 'tablet' | 'mobile';
+export type Device = 'desktop' | 'tablet' | 'mobile';
 
 const mobileMaxWidth = 700;
 const tabletMaxWidth = 1120;
