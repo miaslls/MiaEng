@@ -2,22 +2,50 @@
 
 import styles from './Footer.module.css';
 
-import { useDevice } from '@providers/DeviceContextProvider';
+import Link from 'next/link';
+import { type Device, useDevice } from '@providers/DeviceContextProvider';
+
 import GithubIcon from './icons/GithubIcon';
 import LinkedinBoxIcon from './icons/LinkedinBoxIcon';
 import PortfolioIcon from './icons/PortfolioIcon';
 
-type FooterLinkObj = {
+type FooterLinkProps = {
   url: string;
   text: string;
   icon: JSX.Element;
+  device: Device;
 };
+
+function FooterLink({ url, text, icon, device }: FooterLinkProps) {
+  return (
+    <Link
+      className={styles['link-container']}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className={`icon-container ${styles['link-icon']}`}>{icon}</div>
+
+      {device !== 'mobile' && (
+        <>
+          <span className={styles['link-text']}>{text}</span>
+
+          {device === 'desktop' && (
+            <div className={styles['external-link']}>
+              <i className="fi fi-bs-arrow-up-right"></i>
+            </div>
+          )}
+        </>
+      )}
+    </Link>
+  );
+}
 
 export default function Footer() {
   const device = useDevice();
   const isDesktop = device === 'desktop';
 
-  const links: FooterLinkObj[] = [
+  const links = [
     {
       url: 'https://camilasalles.dev',
       text: isDesktop ? 'camilasalles.dev' : 'portfolio',
@@ -43,9 +71,11 @@ export default function Footer() {
 
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          <li>link</li>
-          <li>link</li>
-          <li>link</li>
+          {links.map((link) => (
+            <li key={link.text}>
+              <FooterLink {...link} device={device} />
+            </li>
+          ))}
         </ul>
       </nav>
 
