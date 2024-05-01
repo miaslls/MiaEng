@@ -43,6 +43,22 @@ export default function MenuProvider({
     };
   }, [isMenuOpen, setIsMenuOpen]);
 
+  useEffect(() => {
+    const handleEscKeydown = (event: any) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      window.addEventListener('keydown', handleEscKeydown);
+
+      return () => {
+        window.removeEventListener('keydown', handleEscKeydown);
+      };
+    }
+  }, [isMenuOpen, setIsMenuOpen]);
+
   const handleToggleMenu = () => {
     setIsMenuOpen((current) => !current);
   };
