@@ -10,6 +10,11 @@
 
 .title {
   flex: 1;
+  color: var(--light-color);
+}
+
+.title:hover {
+  text-decoration: none;
 }
 
 /* 📌 mobile && tablet */
