@@ -90,7 +90,6 @@ body {
 .layout-container {
   width: 100%;
   min-height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,7 +127,8 @@ h3 {
   opacity: 0.6;
 }
 
-a {
+a,
+.button-link {
   font-family: var(--font-outfit);
   color: var(--accent-bg-contrast);
 }
@@ -168,6 +168,42 @@ p.default {
   transition: opacity 1s;
 }
 
+.error {
+  width: 100%;
+  height: calc(100dvh - 15rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.error-icon {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  color: var(--fg-color);
+  opacity: 0.8;
+}
+
+.error-info {
+  max-width: calc(100% - 4rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.25rem;
+}
+
+.error-link {
+  font-family: var(--font-worksans);
+}
+
 .clippable {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -178,7 +214,8 @@ p.default {
 /* 📌 @media */
 
 @media (hover: hover) and (pointer: fine) {
-  a:hover {
+  a:hover,
+  .button-link:hover {
     text-decoration: underline;
   }
 
@@ -198,6 +235,20 @@ p.default {
 @media (max-width: 700px) {
   .child-container {
     margin: 2rem 0 2.5rem 0;
+  }
+
+  .error-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 2.75rem;
+  }
+
+  .error-text {
+    font-size: 1.5rem;
+  }
+
+  .error-link {
+    font-size: 1rem;
   }
 }
 
