@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import styles from './HamburgerMenu.module.css';
 import { useMenu } from '@providers/MenuContextProvider';
 
@@ -51,13 +52,7 @@ export default function HamburgerMenu() {
               </span>
             </h2>
             <li>
-              <a>Lorem ipsum</a>
-            </li>
-            <li>
-              <a>Dolor sit</a>
-            </li>
-            <li>
-              <a>Amet</a>
+              <Link href="/tools/verb-flashcards">verb flashcards</Link>
             </li>
           </ul>
 
