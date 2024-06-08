@@ -1,5 +1,7 @@
 @import '~@flaticon/flaticon-uicons/css/all/all';
 
+/* 📌 vars */
+
 :root {
   color-scheme: light;
 
@@ -14,7 +16,7 @@
   --danger: #f44336;
 
   --layout-padding-desktop: 10%;
-  --layout-padding-mobile: 5%;
+  --layout-padding-mobile: 2.5%;
   --icon-size-default: 1.25rem;
 
   --bg-color: var(--light-color);
@@ -33,6 +35,8 @@
   --accent-bg-contrast: var(--accent-light);
   --accent-fg-contrast: var(--accent-dark);
 }
+
+/* 📌 reset */
 
 html * {
   outline: none;
@@ -71,6 +75,8 @@ button {
   user-select: none;
 }
 
+/* 📌📌 */
+
 html {
   font-size: 16px;
 }
@@ -98,7 +104,7 @@ body {
 .child-container {
   flex: 1;
   width: 100%;
-  margin: 3.5rem 0;
+  margin: 2.5rem 0;
   padding: 0 var(--layout-padding-desktop);
 }
 
@@ -112,7 +118,7 @@ h3 {
 h1 {
   font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -211,7 +217,7 @@ p.default {
   white-space: nowrap;
 }
 
-/* 📌 @media */
+/* 📌📌 @media */
 
 @media (hover: hover) and (pointer: fine) {
   a:hover,
@@ -234,7 +240,7 @@ p.default {
 /* 📌 mobile */
 @media (max-width: 700px) {
   .child-container {
-    margin: 2rem 0 2.5rem 0;
+    margin: 1rem 0 1.5rem 0;
   }
 
   .error-icon {
