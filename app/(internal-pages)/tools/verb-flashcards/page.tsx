@@ -3,7 +3,12 @@
 import { useEffect, useState } from 'react';
 import styles from './VerbFlashcardsPage.module.css';
 import { VerbFlashcards, VerbForm, verbs } from '@/app/_data/verb-flashcards';
-import { verbBaseArray } from '@/app/_data/verb-flashcards/base';
+import { verbBaseArray } from '@/app/_data/verb-flashcards/verbs/base';
+import {
+  ImageFlashcards,
+  verbImages,
+} from '@/app/_data/verb-flashcards/images';
+import Image from 'next/image';
 
 type Options = {
   hideImage: boolean;
@@ -31,9 +36,6 @@ export default function VerbFlashcardsPage() {
     random: false,
   });
 
-  // 🐞
-  console.log({ previousForm, currentForm, currentVerb });
-
   // 📌📌 verb form
   useEffect(() => {
     if (currentForm !== previousForm) {
@@ -52,7 +54,7 @@ export default function VerbFlashcardsPage() {
   const handleClickButton = () => {
     if (currentVerb.base) {
       const currentIndex = verbBaseArray.findIndex(
-        (base) => base === currentVerb.base,
+        (base) => base === currentVerb.base
       );
 
       let nextIndex: number;
@@ -132,6 +134,16 @@ export default function VerbFlashcardsPage() {
       </header>
 
       <main className={styles['main-container']}>
+        <Image
+          src={
+            verbImages[currentVerb.base as keyof ImageFlashcards] ||
+            verbImages.reference
+          }
+          alt=""
+          width={300}
+          height={300}
+          className={styles['verb-image']}
+        />
         <button
           className={styles['current-verb-btn']}
           onClick={handleClickButton}
