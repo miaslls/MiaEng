@@ -23,7 +23,8 @@
       "@components/*": ["./app/_components/*"],
       "@data/*": ["./app/_data/*"],
       "@lib/*": ["./app/_lib/*"],
-      "@providers/*": ["./app/_providers/*"]
+      "@providers/*": ["./app/_providers/*"],
+      "@images/*": ["./public/images/*"]
     }
   },
   "include": [
