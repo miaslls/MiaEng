@@ -1,4 +1,4 @@
-import { VerbFlashcards } from "..";
+import { VerbFlashcards } from ".";
 
 export const pastParticiple: VerbFlashcards = {
   run: 'run',

@@ -1,9 +1,9 @@
-import { base } from "./verbs/base";
-import { pastParticiple } from "./verbs/past-participle";
-import { presentParticiple } from "./verbs/present-participle";
-import { simplePast } from "./verbs/simple-past";
+import { base } from "./base";
+import { pastParticiple } from "./past-participle";
+import { presentParticiple } from "./present-participle";
+import { simplePast } from "./simple-past";
 
-export const verbs = {
+export const verbs: Record<VerbForm, VerbFlashcards> = {
   base,
   presentParticiple,
   simplePast,

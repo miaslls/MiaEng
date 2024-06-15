@@ -1,14 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import styles from './VerbFlashcardsPage.module.css';
-import { VerbFlashcards, VerbForm, verbs } from '@/app/_data/verb-flashcards';
-import { verbBaseArray } from '@/app/_data/verb-flashcards/verbs/base';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+
 import {
-  ImageFlashcards,
+  type VerbFlashcards,
+  type VerbForm,
+  verbs,
+} from '@/app/_data/verb-flashcards/verbs';
+import {
+  type ImageFlashcards,
   verbImages,
 } from '@/app/_data/verb-flashcards/images';
-import Image from 'next/image';
+import { verbBaseArray } from '@/app/_data/verb-flashcards/verbs/base';
 
 type Options = {
   hideImage: boolean;
@@ -62,7 +68,7 @@ export default function VerbFlashcardsPage() {
       if (currentIndex === verbBaseArray.length - 1) nextIndex = 0;
       else nextIndex = currentIndex + 1;
 
-      const nextBase = verbBaseArray[nextIndex];
+      const nextBase = verbBaseArray[nextIndex] as keyof VerbFlashcards;
 
       setCurrentVerb({
         ...currentVerb,
@@ -72,9 +78,10 @@ export default function VerbFlashcardsPage() {
       });
     } else {
       const firstBase = verbBaseArray[0];
+
       setCurrentVerb({
         index: 0,
-        base: firstBase,
+        base: firstBase as keyof VerbFlashcards,
         verb: verbs[currentForm][firstBase],
       });
     }

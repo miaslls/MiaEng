@@ -29,9 +29,10 @@ import tieImg from '@images/verb-flashcards/tie.jpg'
 import washImg from '@images/verb-flashcards/wash.jpg'
 import watchImg from '@images/verb-flashcards/watch.jpg'
 import writeImg from '@images/verb-flashcards/write.jpg'
-import { StaticImageData } from 'next/image'
+import { type StaticImageData } from 'next/image'
+import { type VerbFlashcards } from './verbs'
 
-export const verbImages = {
+export const verbImages: ImageFlashcards = {
   reference: referenceImg,
   run: runImg,
   eat: eatImg,
@@ -65,36 +66,4 @@ export const verbImages = {
   hug: hugImg,
 }
 
-export type ImageFlashcards = {
-  reference: StaticImageData
-  run: StaticImageData
-  eat: StaticImageData
-  drink: StaticImageData
-  jump: StaticImageData
-  sleep: StaticImageData
-  play: StaticImageData
-  sing: StaticImageData
-  dance: StaticImageData
-  laugh: StaticImageData
-  cry: StaticImageData
-  brush: StaticImageData
-  wash: StaticImageData
-  study: StaticImageData
-  read: StaticImageData
-  write: StaticImageData
-  draw: StaticImageData
-  cook: StaticImageData
-  clean: StaticImageData
-  watch: StaticImageData
-  listen: StaticImageData
-  swim: StaticImageData
-  make: StaticImageData
-  bake: StaticImageData
-  take: StaticImageData
-  sit: StaticImageData
-  get: StaticImageData
-  put: StaticImageData
-  cut: StaticImageData
-  tie: StaticImageData
-  hug: StaticImageData
-}
+export type ImageFlashcards = Record<keyof VerbFlashcards, StaticImageData> & { reference: StaticImageData }
