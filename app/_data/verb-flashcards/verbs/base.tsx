@@ -1,4 +1,4 @@
-import { VerbFlashcards } from ".";
+import { VerbFlashcards } from '.';
 
 export const base: VerbFlashcards = {
   run: 'run',
@@ -30,7 +30,7 @@ export const base: VerbFlashcards = {
   put: 'put',
   cut: 'cut',
   tie: 'tie',
-  hug: 'hug'
-}
+  hug: 'hug',
+};
 
 export const verbBaseArray = Object.keys(base) as (keyof VerbFlashcards)[];
