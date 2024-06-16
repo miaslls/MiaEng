@@ -1,8 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import styles from './HamburgerMenu.module.css';
+
 import { useMenu } from '@providers/MenuContextProvider';
+import { menuData } from '@/app/_data/menu';
+import Link from 'next/link';
 
 type OverlayProps = {
   children: React.ReactNode;
@@ -25,7 +27,7 @@ export default function HamburgerMenu() {
   const { isMenuOpen, handleToggleMenu: closeMenu } = useMenu();
 
   function handleClick(
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
+    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
   ) {
     e.stopPropagation();
 
@@ -44,35 +46,36 @@ export default function HamburgerMenu() {
         </button>
 
         <nav className={styles['menu-nav']}>
-          <ul>
-            <h2>
-              <span>TOOLS</span>
-              <span className="icon-container">
-                <i className="fi fi-ss-angle-double-small-right"></i>
-              </span>
-            </h2>
-            <li>
-              <Link href="/tools/verb-flashcards">verb flashcards</Link>
-            </li>
-          </ul>
+          {menuData.map((category) => (
+            <div key={category.title}>
+              <div className={styles['category-header']}>
+                <span>
+                  {category.titleUrl ? (
+                    <Link href={category.titleUrl} onClick={closeMenu}>
+                      {category.title}
+                    </Link>
+                  ) : (
+                    category.title
+                  )}
+                </span>
+                <span className="icon-container">
+                  <i className="fi fi-ss-angle-double-small-right"></i>
+                </span>
+              </div>
 
-          <ul>
-            <h2>
-              <span>GAMES</span>
-              <span className="icon-container">
-                <i className="fi fi-ss-angle-double-small-right"></i>
-              </span>
-            </h2>
-            <li>
-              <a>Lorem ipsum</a>
-            </li>
-            <li>
-              <a>Dolor sit</a>
-            </li>
-            <li>
-              <a>Amet</a>
-            </li>
-          </ul>
+              {category.items && (
+                <ul className={styles['category-items']}>
+                  {category.items.map((item) => (
+                    <li key={item.url}>
+                      <Link href={item.url} onClick={closeMenu}>
+                        {item.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
         </nav>
 
         <footer className={styles['menu-footer']}>

@@ -11,7 +11,7 @@
   --accent-light: #8797af;
   --accent-dark: #4964b3;
 
-  --sucess: #548a67;
+  --success: #548a67;
   --warning: #d27a2f;
   --danger: #f44336;
 
@@ -25,6 +25,11 @@
   --accent-fg-contrast: var(--accent-light);
 
   --menu-bg: color-mix(in srgb, var(--accent-color) 25%, var(--bg-color));
+
+  --test-border: 1px dotted rgba(128, 128, 128, 0.5);
+  --test-border-success: 1px dotted var(--success);
+  --test-border-warning: 1px dotted var(--warning);
+  --test-border-danger: 1px dotted var(--danger);
 }
 
 :root[data-theme='dark'] {
