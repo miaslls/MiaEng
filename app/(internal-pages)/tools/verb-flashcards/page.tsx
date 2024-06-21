@@ -1,7 +1,7 @@
 'use client';
 
+import * as React from 'react';
 import styles from './VerbFlashcardsPage.module.css';
-
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
