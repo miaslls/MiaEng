@@ -1,5 +1,6 @@
 'use client';
 
+import * as React from 'react';
 import styles from './HamburgerMenu.module.css';
 
 import { useMenu } from '@providers/MenuContextProvider';
