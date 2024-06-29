@@ -1,5 +1,6 @@
 'use client';
-import * as React from 'react';
+
+import React from 'react';
 import { useTheme } from '@/app/_providers/ThemeContextProvider';
 
 export default function ToggleThemeButton({ disabled }: { disabled: boolean }) {

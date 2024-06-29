@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 export const ThemeContext = createContext(null);
 
@@ -10,7 +11,7 @@ export function useTheme() {
   if (!context) {
     throw new Error(
       'useTheme must be used within a component wrapped with ThemeProvider. ' +
-        'ThemeProvider sets up the theme context and provides a function for toggling the theme.',
+        'ThemeProvider sets up the theme context and provides a function for toggling the theme.'
     );
   }
 

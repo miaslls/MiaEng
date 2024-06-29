@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 import { useSessionStorage } from '@lib/storage';
 
 type MenuContextState = {
@@ -16,7 +16,7 @@ export function useMenu() {
   if (!context) {
     throw new Error(
       'useMenu must be used within a component wrapped with MenuProvider. ' +
-        'Wrap your component tree with <MenuProvider> to enable menu functionality.',
+        'Wrap your component tree with <MenuProvider> to enable menu functionality.'
     );
   }
 
@@ -44,7 +44,7 @@ export default function MenuProvider({
   }, [isMenuOpen, setIsMenuOpen]);
 
   useEffect(() => {
-    const handleEscKeydown = (event: any) => {
+    const handleEscKeydown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsMenuOpen(false);
       }

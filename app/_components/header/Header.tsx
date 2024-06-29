@@ -1,11 +1,11 @@
 'use client';
 
-import * as React from 'react';
 import styles from './Header.module.css';
 
-import { useMenu } from '@providers/MenuContextProvider';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { useMenu } from '@providers/MenuContextProvider';
 
 const ToggleThemeButton = dynamic(() => import('./ToggleThemeButton'), {
   ssr: false,

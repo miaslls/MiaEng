@@ -16,18 +16,18 @@ export function useDevice() {
     throw new Error(
       'useDevice must be used within a component wrapped with DeviceProvider. ' +
         'DeviceProvider sets up the device context based on window width, ' +
-        'ensuring accurate device type information for responsive behavior.',
+        'ensuring accurate device type information for responsive behavior.'
     );
   }
 
   return context;
 }
 
-export default function DeviceProvider({
-  children,
-}: {
+interface ProviderProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function DeviceProvider({ children }: ProviderProps) {
   const [device, setDevice] = useState<Device | null>(null);
 
   // useEffect to dynamically update the device type based on window width and set the corresponding value in the DeviceContext. The device type is determined using breakpoints for mobile, tablet, and desktop.

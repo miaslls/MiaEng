@@ -1,11 +1,8 @@
 'use client';
 
 import styles from './VerbFlashcardsPage.module.css';
-
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-
 import {
   type VerbFlashcards,
   type VerbForm,

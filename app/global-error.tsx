@@ -1,7 +1,6 @@
 'use client';
 
-import * as React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export default function GlobalError({
   error,

@@ -1,8 +1,8 @@
 'use client';
 
-import * as React from 'react';
 import styles from './Footer.module.css';
 
+import React from 'react';
 import Link from 'next/link';
 import { type Device, useDevice } from '@providers/DeviceContextProvider';
 
