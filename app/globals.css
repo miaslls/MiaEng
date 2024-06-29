@@ -18,6 +18,8 @@
   --layout-padding-desktop: 10%;
   --layout-padding-mobile: 2.5%;
   --icon-size-default: 1.25rem;
+  --icon-size-small: 1rem;
+  --icon-size-large: 1.75rem;
 
   --bg-color: var(--light-color);
   --fg-color: var(--dark-color);
@@ -25,6 +27,7 @@
   --accent-fg-contrast: var(--accent-light);
 
   --menu-bg: color-mix(in srgb, var(--accent-color) 25%, var(--bg-color));
+  --image-filter: unset
 
   --test-border: 1px dotted rgba(128, 128, 128, 0.5);
   --test-border-success: 1px dotted var(--success);
@@ -37,8 +40,12 @@
 
   --bg-color: var(--dark-color);
   --fg-color: var(--light-color);
+  
+  --accent-color: color-mix(in srgb, #663399 75%, var(--bg-color));
   --accent-bg-contrast: var(--accent-light);
   --accent-fg-contrast: var(--accent-dark);
+
+  --image-filter: brightness(0.75) saturate(0.75);
 }
 
 /* 📌 reset */
@@ -162,6 +169,18 @@ p.default {
   width: var(--icon-size-default);
   height: var(--icon-size-default);
   font-size: var(--icon-size-default);
+}
+
+.small-icon {
+  width: var(--icon-size-small);
+  height: var(--icon-size-small);
+  font-size: var(--icon-size-small);
+}
+
+.large-icon {
+  width: var(--icon-size-large);
+  height: var(--icon-size-large);
+  font-size: var(--icon-size-large);
 }
 
 .icon-button {

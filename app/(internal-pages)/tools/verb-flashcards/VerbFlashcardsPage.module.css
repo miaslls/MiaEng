@@ -1,7 +1,8 @@
 .page-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  user-select: none;
 }
 
 .title {
@@ -20,13 +21,14 @@
   padding: 0 0.75rem;
   display: inline-flex;
   align-items: center;
-  background: color-mix(in srgb, var(--accent-dark) 30%, var(--bg-color));
   border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--accent-dark) 30%, var(--bg-color));
   font-family: var(--font-work_sans);
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--fg-color);
   user-select: none;
+  margin-bottom: 1rem;
 }
 
 .active-pill {
@@ -39,22 +41,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.25rem;
+}
+
+.options-container {
+  min-width: 20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
-  /* 🐞 */
-  /* border: 1px dotted gray; */
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.option-label {
+  font-size: 1rem;
+}
+
+.image-container {
+  width: 21rem;
+  height: 21rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--accent-dark) 20%, var(--bg-color));
 }
 
 .verb-image {
-  border-radius: 1rem;
+  filter: var(--image-filter);
 }
 
 .current-verb-btn {
+  height: 3rem;
   min-width: 10rem;
-  background-color: var(--accent-color);
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
-  color: var(--light-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
   font-family: var(--font-outfit);
+  color: var(--light-color);
 }
 
 @media (hover: hover) and (pointer: fine) {
