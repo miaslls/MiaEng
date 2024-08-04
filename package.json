@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,html}\""
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.2.1",
@@ -23,6 +24,7 @@
     "eslint-config-next": "14.2.1",
     "eslint-plugin-react": "^7.34.2",
     "globals": "^15.4.0",
+    "prettier": "^3.3.3",
     "typescript": "^5",
     "typescript-eslint": "^7.13.0"
   }
