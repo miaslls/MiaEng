@@ -39,9 +39,16 @@ button.close {
   gap: 2.5rem;
 }
 
+.category-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
 .category-header {
   display: flex;
-  width: 100%;
   align-items: center;
   gap: 1rem;
   font-family: var(--font-outfit);
@@ -52,6 +59,12 @@ button.close {
 
 .category-header a {
   color: var(--fg-color);
+}
+
+.category-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .category-items a {

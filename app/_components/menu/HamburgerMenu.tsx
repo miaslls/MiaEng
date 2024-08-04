@@ -48,7 +48,7 @@ export default function HamburgerMenu() {
 
         <nav className={styles['menu-nav']}>
           {menuData.map((category) => (
-            <div key={category.title}>
+            <div className={styles['category-container']} key={category.title}>
               <div className={styles['category-header']}>
                 <span>
                   {category.titleUrl ? (
