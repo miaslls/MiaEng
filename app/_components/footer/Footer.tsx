@@ -22,8 +22,8 @@ function FooterLink({ url, text, icon, device }: FooterLinkProps) {
     <Link
       className={styles['link-container']}
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target='_blank'
+      rel='noopener noreferrer'
     >
       <div className={`icon-container ${styles['link-icon']}`}>{icon}</div>
 
@@ -33,7 +33,7 @@ function FooterLink({ url, text, icon, device }: FooterLinkProps) {
 
           {device === 'desktop' && (
             <div className={styles['external-link']}>
-              <i className="fi fi-bs-arrow-up-right"></i>
+              <i className='fi fi-bs-arrow-up-right'></i>
             </div>
           )}
         </>

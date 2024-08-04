@@ -16,16 +16,16 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="error">
-          <div className="error-container">
-            <div className="error-icon">
-              <i className="fi fi-ts-times-hexagon"></i>
+        <div className='error'>
+          <div className='error-container'>
+            <div className='error-icon'>
+              <i className='fi fi-ts-times-hexagon'></i>
             </div>
 
-            <div className="wrapper">
+            <div className='wrapper'>
               <h2>Something went wrong!</h2>
               <button
-                className="button-link error-link"
+                className='button-link error-link'
                 onClick={() => reset()}
               >
                 Try again

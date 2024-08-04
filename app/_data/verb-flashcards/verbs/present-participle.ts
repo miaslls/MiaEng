@@ -1,4 +1,4 @@
-import { VerbFlashcards } from ".";
+import { VerbFlashcards } from '.';
 
 export const presentParticiple: VerbFlashcards = {
   run: 'running',
@@ -30,5 +30,5 @@ export const presentParticiple: VerbFlashcards = {
   put: 'putting',
   cut: 'cutting',
   tie: 'tying',
-  hug: 'hugging'
+  hug: 'hugging',
 };

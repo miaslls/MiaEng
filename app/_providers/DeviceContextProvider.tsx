@@ -16,7 +16,7 @@ export function useDevice() {
     throw new Error(
       'useDevice must be used within a component wrapped with DeviceProvider. ' +
         'DeviceProvider sets up the device context based on window width, ' +
-        'ensuring accurate device type information for responsive behavior.'
+        'ensuring accurate device type information for responsive behavior.',
     );
   }
 

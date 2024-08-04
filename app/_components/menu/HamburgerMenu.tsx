@@ -28,7 +28,7 @@ export default function HamburgerMenu() {
   const { isMenuOpen, handleToggleMenu: closeMenu } = useMenu();
 
   function handleClick(
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
+    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
   ) {
     e.stopPropagation();
 
@@ -41,8 +41,8 @@ export default function HamburgerMenu() {
     <Overlay isOpen={isMenuOpen} close={closeMenu}>
       <div className={styles.container} onClick={handleClick}>
         <button className={`icon-button ${styles.close}`} onClick={handleClick}>
-          <div className="icon-container">
-            <i className="fi fi-rs-cross-small"></i>
+          <div className='icon-container'>
+            <i className='fi fi-rs-cross-small'></i>
           </div>
         </button>
 
@@ -59,8 +59,8 @@ export default function HamburgerMenu() {
                     category.title
                   )}
                 </span>
-                <span className="icon-container">
-                  <i className="fi fi-ss-angle-double-small-right"></i>
+                <span className='icon-container'>
+                  <i className='fi fi-ss-angle-double-small-right'></i>
                 </span>
               </div>
 
@@ -80,10 +80,10 @@ export default function HamburgerMenu() {
         </nav>
 
         <footer className={styles['menu-footer']}>
-          <h3 className="title clippable">
+          <h3 className='title clippable'>
             <span>MiaEng</span> &nbsp; tools & games
           </h3>
-          <p className="clippable">
+          <p className='clippable'>
             © {new Date().getFullYear()} Camila Salles
           </p>
         </footer>

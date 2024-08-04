@@ -1,4 +1,4 @@
-import { VerbFlashcards } from ".";
+import { VerbFlashcards } from '.';
 
 export const simplePast: VerbFlashcards = {
   run: 'ran',
@@ -30,5 +30,5 @@ export const simplePast: VerbFlashcards = {
   put: 'put',
   cut: 'cut',
   tie: 'tied',
-  hug: 'hugged'
-}
+  hug: 'hugged',
+};

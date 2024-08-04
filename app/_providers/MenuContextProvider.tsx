@@ -16,7 +16,7 @@ export function useMenu() {
   if (!context) {
     throw new Error(
       'useMenu must be used within a component wrapped with MenuProvider. ' +
-        'Wrap your component tree with <MenuProvider> to enable menu functionality.'
+        'Wrap your component tree with <MenuProvider> to enable menu functionality.',
     );
   }
 

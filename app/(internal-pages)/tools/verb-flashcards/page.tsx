@@ -161,7 +161,7 @@ export default function VerbFlashcardsPage() {
               onClick={() => handleToggleOption(option)}
             >
               <div className={styles.option}>
-                <div className="small-icon">
+                <div className='small-icon'>
                   <i
                     className={`fi fi-rr-${
                       option.isChecked ? 'checkbox' : 'square'
@@ -176,12 +176,12 @@ export default function VerbFlashcardsPage() {
 
         <div className={styles['image-container']}>
           {optionsState.hideImage ? (
-            <div className="large-icon">
-              <i className="fi fi-rs-crossed-eye"></i>
+            <div className='large-icon'>
+              <i className='fi fi-rs-crossed-eye'></i>
             </div>
           ) : (
             <Image
-              alt=""
+              alt=''
               width={336}
               height={336}
               className={styles['verb-image']}
@@ -198,8 +198,8 @@ export default function VerbFlashcardsPage() {
           onClick={handleClickButton}
         >
           {optionsState.hideVerb ? (
-            <div className="icon-container">
-              <i className="fi fi-rs-crossed-eye"></i>
+            <div className='icon-container'>
+              <i className='fi fi-rs-crossed-eye'></i>
             </div>
           ) : (
             currentVerb?.verb || 'CLICK ME'

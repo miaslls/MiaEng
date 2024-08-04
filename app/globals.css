@@ -27,9 +27,7 @@
   --accent-fg-contrast: var(--accent-light);
 
   --menu-bg: color-mix(in srgb, var(--accent-color) 25%, var(--bg-color));
-  --image-filter: unset
-
-  --test-border: 1px dotted rgba(128, 128, 128, 0.5);
+  --image-filter: unset --test-border: 1px dotted rgba(128, 128, 128, 0.5);
   --test-border-success: 1px dotted var(--success);
   --test-border-warning: 1px dotted var(--warning);
   --test-border-danger: 1px dotted var(--danger);
@@ -40,7 +38,7 @@
 
   --bg-color: var(--dark-color);
   --fg-color: var(--light-color);
-  
+
   --accent-color: color-mix(in srgb, #663399 75%, var(--bg-color));
   --accent-bg-contrast: var(--accent-light);
   --accent-fg-contrast: var(--accent-dark);

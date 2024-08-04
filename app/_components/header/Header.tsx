@@ -20,12 +20,12 @@ export default function Header() {
         className={`icon-button ${isMenuOpen ? 'disabled-button' : ''}`}
         onClick={openMenu}
       >
-        <div className="icon-container">
-          <i className="fi fi-ss-menu-burger"></i>
+        <div className='icon-container'>
+          <i className='fi fi-ss-menu-burger'></i>
         </div>
       </button>
 
-      <Link href="/" className={`${styles.title} title clippable`}>
+      <Link href='/' className={`${styles.title} title clippable`}>
         <span>MiaEng</span> &nbsp; tools & games
       </Link>
 

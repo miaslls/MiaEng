@@ -12,7 +12,7 @@ export default function ToggleThemeButton({ disabled }: { disabled: boolean }) {
       className={`icon-button ${disabled ? 'disabled-button' : ''}`}
       onClick={toggleTheme}
     >
-      <div className="icon-container">
+      <div className='icon-container'>
         <i
           className={`fi fi-ts-${isDarkTheme ? 'bulb' : 'lightbulb-slash'}`}
         ></i>

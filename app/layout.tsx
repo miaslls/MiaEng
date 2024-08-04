@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${work_sans.variable} ${outfit.variable}`}>
+    <html lang='en' className={`${work_sans.variable} ${outfit.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: getTheme }} />
       </head>
@@ -65,10 +65,10 @@ export default function RootLayout({
         <DeviceProvider>
           <ThemeProvider>
             <MenuProvider>
-              <div className="layout-container">
+              <div className='layout-container'>
                 <Header />
                 <HamburgerMenu />
-                <div className="child-container">{children}</div>
+                <div className='child-container'>{children}</div>
                 <Footer />
               </div>
             </MenuProvider>
