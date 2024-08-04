@@ -17,6 +17,12 @@ import suitImg from '@images/fashion-flashcards/suit.jpg';
 import tanktopImg from '@images/fashion-flashcards/tanktop.jpg';
 import tshirtImg from '@images/fashion-flashcards/tshirt.jpg';
 
+export const fashionCategories: FashionCategory[] = [
+  'clothes',
+  'accessories',
+  'footwear',
+];
+
 export const fashion: FashionFlashcards = {
   clothes: {
     dress: { label: 'dress', image: dressImg },
@@ -42,32 +48,14 @@ export const fashion: FashionFlashcards = {
   },
 };
 
+export type FashionCategory = 'clothes' | 'footwear' | 'accessories';
+
 export type FashionItem = {
   label: string;
   image: StaticImageData;
 };
 
-export type FashionFlashcards = {
-  clothes: {
-    dress: FashionItem;
-    hoodie: FashionItem;
-    jeans: FashionItem;
-    pajamas: FashionItem;
-    shorts: FashionItem;
-    skirt: FashionItem;
-    suit: FashionItem;
-    tanktop: FashionItem;
-    tshirt: FashionItem;
-  };
-  footwear: {
-    boots: FashionItem;
-    heels: FashionItem;
-    sneakers: FashionItem;
-    socks: FashionItem;
-  };
-  accessories: {
-    belt: FashionItem;
-    bowtie: FashionItem;
-    hat: FashionItem;
-  };
-};
+export type FashionFlashcards = Record<
+  FashionCategory,
+  Record<string, FashionItem>
+>;

@@ -11,5 +11,8 @@ export const tools: MenuCategory = {
 
 export const games: MenuCategory = {
   title: 'games',
-  items: [{ text: 'verb flashcards', url: '/games/verb-flashcards' }],
+  items: [
+    { text: 'verb flashcards', url: '/games/verb-flashcards' },
+    { text: 'fashion flashcards', url: '/games/fashion-flashcards' },
+  ],
 };
