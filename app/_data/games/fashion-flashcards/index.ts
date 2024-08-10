@@ -1,5 +1,6 @@
 import type { StaticImageData } from 'next/image';
 
+import referenceImg from '@images/fashion-flashcards/reference.jpg';
 import bootsImg from '@images/fashion-flashcards/boots.jpg';
 import beltImg from '@images/fashion-flashcards/belt.jpg';
 import bowtieImg from '@images/fashion-flashcards/bowtie.jpg';
@@ -22,6 +23,11 @@ export const fashionCategories: FashionCategory[] = [
   'accessories',
   'footwear',
 ];
+
+export const fashionCover: FashionItem = {
+  label: null,
+  image: referenceImg,
+};
 
 export const fashion: FashionFlashcards = {
   clothes: {
@@ -48,10 +54,16 @@ export const fashion: FashionFlashcards = {
   },
 };
 
+export const allFashion: Record<string, FashionItem> = {
+  ...fashion.clothes,
+  ...fashion.footwear,
+  ...fashion.accessories,
+};
+
 export type FashionCategory = 'clothes' | 'footwear' | 'accessories';
 
 export type FashionItem = {
-  label: string;
+  label: string | null;
   image: StaticImageData;
 };
 
