@@ -11,24 +11,28 @@ import {
   fashionCover,
   fashionCategories,
 } from '@/app/_data/games/fashion-flashcards';
+import { useHeaderWithPills } from '@/app/_hooks/page-elements/useHeaderWithPills';
 
 export default function FashionFlashcardsPage() {
-  type Category = (typeof fashionCategories)[number] | 'all';
+  type Category = (typeof fashionCategories)[number];
 
-  const pillData: Pill[] = [
-    { key: 'all', label: 'show all' },
+  const pillData = [
     ...fashionCategories.map((categ) => ({
       key: categ.replace(' ', '-'),
       label: categ,
     })),
   ];
 
+  const { HeaderWithPillsUi, activePill } = useHeaderWithPills({
+    title: 'Fashion Flashcards',
+    hasAllPill: true,
+    pillData,
+  });
+
   const [currentFlashcard, setCurrentFlashcard] = useState<DisplayFlashcard>({
     ...fashionCover,
     index: null,
   });
-
-  const [activePill, setActivePill] = useState<Category>('all');
 
   const [optionsState, setOptionsState] = useState<OptionsState>({
     hideImage: false,
@@ -40,7 +44,7 @@ export default function FashionFlashcardsPage() {
     () =>
       activePill === 'all'
         ? allFashionFlashcards
-        : fashionFlashcards[activePill],
+        : fashionFlashcards[activePill as Category],
     [activePill],
   );
 
@@ -127,25 +131,8 @@ export default function FashionFlashcardsPage() {
   }, [currentArray]);
 
   return (
-    <div className={styles['page-container']}>
-      <header className={styles['header-with-pills']}>
-        <h1 className={styles.title}>Fashion Flashcards</h1>
-
-        <ul className={styles['pill-container']}>
-          {pillData.map((pill) => (
-            <li
-              key={pill.key}
-              className={`${styles.pill} ${
-                activePill === pill.key ? styles['active-pill'] : ''
-              }`}
-              onClick={() => setActivePill(pill.key as Category)}
-            >
-              {pill.label}
-            </li>
-          ))}
-        </ul>
-      </header>
-
+    <div className='page-container'>
+      <HeaderWithPillsUi />
       <main className={styles['main-container']}>
         <div className={styles['options-container']}>
           {options.map((option) => (
@@ -169,7 +156,7 @@ export default function FashionFlashcardsPage() {
             alt=''
             width={336}
             height={336}
-            className={`${styles['flashcard-image']} ${optionsState.hideImage ? styles['opacity-50'] : ''}`}
+            className={`${styles['flashcard-image']} ${optionsState.hideImage ? 'opacity-50' : ''}`}
             src={currentFlashcard.image}
           />
           <div
@@ -206,8 +193,6 @@ export interface Flashcard {
 export interface DisplayFlashcard extends Flashcard {
   index: number | null;
 }
-
-type Pill = { key: string; label: string };
 
 type Option = {
   key: keyof OptionsState;

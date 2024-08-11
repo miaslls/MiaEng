@@ -1,42 +1,3 @@
-.page-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  user-select: none;
-}
-
-.title {
-  text-transform: lowercase;
-}
-
-.pill-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.5rem;
-}
-
-.pill {
-  width: fit-content;
-  height: 1.75rem;
-  padding: 0 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 0.9rem;
-  background: color-mix(in srgb, var(--accent-dark) 30%, var(--bg-color));
-  font-family: var(--font-work_sans);
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--fg-color);
-  user-select: none;
-  margin-bottom: 1rem;
-}
-
-.active-pill {
-  background: var(--accent-dark);
-  color: var(--light-color);
-  font-weight: 500;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -73,15 +34,10 @@
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
-  /* background: color-mix(in srgb, var(--accent-dark) 20%, var(--bg-color)); */
 }
 
 .flashcard-image {
   filter: var(--image-filter);
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .image-overlay {
@@ -117,12 +73,4 @@
   background-color: var(--accent-color);
   font-family: var(--font-outfit);
   color: var(--light-color);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .pill:hover {
-    background: var(--accent-dark);
-    color: var(--light-color);
-    cursor: pointer;
-  }
 }
