@@ -1,6 +1,4 @@
-import type { StaticImageData } from 'next/image';
-
-import referenceImg from '@images/fashion-flashcards/reference.jpg';
+import coverImg from '@images/fashion-flashcards/_cover.jpg';
 import bootsImg from '@images/fashion-flashcards/boots.jpg';
 import beltImg from '@images/fashion-flashcards/belt.jpg';
 import bowtieImg from '@images/fashion-flashcards/bowtie.jpg';
@@ -17,6 +15,7 @@ import socksImg from '@images/fashion-flashcards/socks.jpg';
 import suitImg from '@images/fashion-flashcards/suit.jpg';
 import tanktopImg from '@images/fashion-flashcards/tanktop.jpg';
 import tshirtImg from '@images/fashion-flashcards/tshirt.jpg';
+import type { Flashcard } from '@/app/(internal-pages)/games/fashion-flashcards/page';
 
 export const fashionCategories: FashionCategory[] = [
   'clothes',
@@ -24,50 +23,41 @@ export const fashionCategories: FashionCategory[] = [
   'footwear',
 ];
 
-export const fashionCover: FashionItem = {
+export const fashionCover: Flashcard = {
+  key: null,
   label: null,
-  image: referenceImg,
+  image: coverImg,
 };
 
-export const fashion: FashionFlashcards = {
-  clothes: {
-    dress: { label: 'dress', image: dressImg },
-    hoodie: { label: 'hoodie', image: hoodieImg },
-    jeans: { label: 'jeans', image: jeansImg },
-    pajamas: { label: 'pajamas', image: pajamasImg },
-    shorts: { label: 'shorts', image: shortsImg },
-    skirt: { label: 'skirt', image: skirtImg },
-    suit: { label: 'suit', image: suitImg },
-    tanktop: { label: 'tank-top', image: tanktopImg },
-    tshirt: { label: 'tshirt', image: tshirtImg },
-  },
-  footwear: {
-    boots: { label: 'boots', image: bootsImg },
-    heels: { label: 'heels', image: heelsImg },
-    sneakers: { label: 'sneakers', image: sneakersImg },
-    socks: { label: 'socks', image: socksImg },
-  },
-  accessories: {
-    belt: { label: 'belt', image: beltImg },
-    bowtie: { label: 'bow-tie', image: bowtieImg },
-    hat: { label: 'hat', image: hatImg },
-  },
+export const fashionFlashcards: Record<FashionCategory, Flashcard[]> = {
+  clothes: [
+    { key: 'dress', label: 'dress', image: dressImg },
+    { key: 'hoodie', label: 'hoodie', image: hoodieImg },
+    { key: 'jeans', label: 'jeans', image: jeansImg },
+    { key: 'pajamas', label: 'pajamas', image: pajamasImg },
+    { key: 'shorts', label: 'shorts', image: shortsImg },
+    { key: 'skirt', label: 'skirt', image: skirtImg },
+    { key: 'suit', label: 'suit', image: suitImg },
+    { key: 'tanktop', label: 'tank-top', image: tanktopImg },
+    { key: 'tshirt', label: 'tshirt', image: tshirtImg },
+  ],
+  footwear: [
+    { key: 'boots', label: 'boots', image: bootsImg },
+    { key: 'heels', label: 'heels', image: heelsImg },
+    { key: 'sneakers', label: 'sneakers', image: sneakersImg },
+    { key: 'socks', label: 'socks', image: socksImg },
+  ],
+  accessories: [
+    { key: 'belt', label: 'belt', image: beltImg },
+    { key: 'bowtie', label: 'bow-tie', image: bowtieImg },
+    { key: 'hat', label: 'hat', image: hatImg },
+  ],
 };
 
-export const allFashion: Record<string, FashionItem> = {
-  ...fashion.clothes,
-  ...fashion.footwear,
-  ...fashion.accessories,
-};
+export const allFashionFlashcards: Flashcard[] = [
+  ...fashionFlashcards.clothes,
+  ...fashionFlashcards.footwear,
+  ...fashionFlashcards.accessories,
+];
 
-export type FashionCategory = 'clothes' | 'footwear' | 'accessories';
-
-export type FashionItem = {
-  label: string | null;
-  image: StaticImageData;
-};
-
-export type FashionFlashcards = Record<
-  FashionCategory,
-  Record<string, FashionItem>
->;
+type FashionCategory = 'clothes' | 'footwear' | 'accessories';
