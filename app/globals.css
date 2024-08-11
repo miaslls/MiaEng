@@ -27,7 +27,9 @@
   --accent-fg-contrast: var(--accent-light);
 
   --menu-bg: color-mix(in srgb, var(--accent-color) 25%, var(--bg-color));
-  --image-filter: unset --test-border: 1px dotted rgba(128, 128, 128, 0.5);
+  --image-filter: saturate(0.9);
+
+  --test-border: 1px dotted rgba(128, 128, 128, 0.5);
   --test-border-success: 1px dotted var(--success);
   --test-border-warning: 1px dotted var(--warning);
   --test-border-danger: 1px dotted var(--danger);
@@ -43,7 +45,7 @@
   --accent-bg-contrast: var(--accent-light);
   --accent-fg-contrast: var(--accent-dark);
 
-  --image-filter: brightness(0.75) saturate(0.75);
+  --image-filter: brightness(0.9) saturate(0.9);
 }
 
 /* 📌 reset */
