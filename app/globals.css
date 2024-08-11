@@ -120,6 +120,16 @@ body {
   padding: 0 var(--layout-padding-desktop);
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-title {
+  text-transform: lowercase;
+}
+
 h1,
 h2,
 h3 {
@@ -239,6 +249,10 @@ p.default {
   text-overflow: ellipsis;
   text-wrap: nowrap;
   white-space: nowrap;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 /* 📌📌 @media */
