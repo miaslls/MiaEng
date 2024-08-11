@@ -165,21 +165,24 @@ export default function FashionFlashcardsPage() {
         </div>
 
         <figure className={styles['image-container']}>
-          {optionsState.hideImage ? (
-            <div className='large-icon'>
-              <i className='fi fi-rs-crossed-eye'></i>
+          <Image
+            alt=''
+            width={336}
+            height={336}
+            className={`${styles['flashcard-image']} ${optionsState.hideImage ? styles['opacity-50'] : ''}`}
+            src={currentFlashcard.image}
+          />
+          <div
+            className={`${styles['image-overlay']} ${styles['image-overlay--colorize']}`}
+          ></div>
+          {optionsState.hideImage && (
+            <div
+              className={`${styles['image-overlay']} ${styles['image-overlay--hide']}`}
+            >
+              <div className='large-icon'>
+                <i className='fi fi-rs-crossed-eye'></i>
+              </div>
             </div>
-          ) : (
-            <>
-              <Image
-                alt=''
-                width={336}
-                height={336}
-                className={styles['flashcard-image']}
-                src={currentFlashcard.image}
-              />
-              <div className={styles['image-overlay']}></div>
-            </>
           )}
         </figure>
 

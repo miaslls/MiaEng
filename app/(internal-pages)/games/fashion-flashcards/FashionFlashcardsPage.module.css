@@ -73,11 +73,15 @@
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
-  background: color-mix(in srgb, var(--accent-dark) 20%, var(--bg-color));
+  /* background: color-mix(in srgb, var(--accent-dark) 20%, var(--bg-color)); */
 }
 
 .flashcard-image {
   filter: var(--image-filter);
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .image-overlay {
@@ -86,7 +90,19 @@
   position: absolute;
   top: 0;
   left: 0;
+  background: transparent;
+}
+
+.image-overlay--colorize {
   background: color-mix(in srgb, var(--accent-dark) 15%, transparent);
+}
+
+.image-overlay--hide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  backdrop-filter: blur(20px) saturate(0.5);
 }
 
 .flashcard-button {
