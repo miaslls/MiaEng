@@ -7,12 +7,12 @@ import {
   type VerbFlashcards,
   type VerbForm,
   verbs,
-} from '@data/games/verb-flashcards/verbs';
+} from '@data/flashcards/verb-flashcards/verbs';
 import {
   type ImageFlashcards,
   verbImages,
-} from '@data/games/verb-flashcards/images';
-import { verbBaseArray } from '@data/games/verb-flashcards/verbs/base';
+} from '@data/flashcards/verb-flashcards/images';
+import { verbBaseArray } from '@data/flashcards/verb-flashcards/verbs/base';
 
 type Pill = { form: VerbForm; label: string };
 

@@ -6,9 +6,9 @@ import type { Metadata, Viewport } from 'next';
 import { Work_Sans, Outfit } from 'next/font/google';
 import { getTheme } from '@lib/theme';
 
-import Header from '@/app/_components/layout/header/Header';
-import HamburgerMenu from '@/app/_components/layout/menu/HamburgerMenu';
-import Footer from '@/app/_components/layout/footer/Footer';
+import Header from '@components/layout/header/Header';
+import HamburgerMenu from '@components/layout/menu/HamburgerMenu';
+import Footer from '@components/layout/footer/Footer';
 import DeviceProvider from '@providers/DeviceContextProvider';
 import MenuProvider from '@providers/MenuContextProvider';
 

@@ -1,6 +1,6 @@
-import { home, tools, games } from './categories';
+import { home, tools, games, flashcards } from './categories';
 
-export const menuData: MenuCategory[] = [home, tools, games];
+export const menuData: MenuCategory[] = [home, tools, games, flashcards];
 
 export type MenuCategory = {
   title: string;

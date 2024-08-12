@@ -3,7 +3,7 @@
 import styles from './HeaderWithPills.module.css';
 
 import React from 'react';
-import type { Pill } from '@/app/_hooks/page-elements/useHeaderWithPills';
+import type { Pill } from '@hooks/page-elements/useHeaderWithPills';
 
 export const HeaderWithPills = ({
   title,

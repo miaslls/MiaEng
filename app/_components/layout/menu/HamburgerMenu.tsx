@@ -5,7 +5,7 @@ import styles from './HamburgerMenu.module.css';
 import React from 'react';
 import Link from 'next/link';
 import { useMenu } from '@providers/MenuContextProvider';
-import { menuData } from '@/app/_data/menu';
+import { menuData } from '@data/menu';
 
 type OverlayProps = {
   children: React.ReactNode;

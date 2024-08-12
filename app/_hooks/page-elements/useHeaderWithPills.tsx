@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { HeaderWithPills } from '@/app/_components/page-elements/HeaderWithPills';
+import { HeaderWithPills } from '@components/page-elements/HeaderWithPills';
 
 export const useHeaderWithPills = ({
   title,
