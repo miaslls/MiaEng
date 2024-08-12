@@ -26,7 +26,7 @@ export const FlashcardsPage = ({
 
   const { HeaderWithPillsUi, activePill } = useHeaderWithPills({
     title: 'Fashion Flashcards',
-    hasAllPill: true,
+    hasAllPill: !!allFlashcardsArray,
     pillData,
   });
 
