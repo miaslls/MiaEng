@@ -202,7 +202,11 @@ export default function VerbFlashcardsPage() {
               <i className='fi fi-rs-crossed-eye'></i>
             </div>
           ) : (
-            currentVerb?.verb || 'CLICK ME'
+            (currentVerb?.verb ?? (
+              <div className='icon-container'>
+                <i className={'fi fi-rs-play'}></i>
+              </div>
+            ))
           )}
         </button>
       </main>
