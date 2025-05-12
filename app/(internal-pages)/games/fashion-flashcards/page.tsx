@@ -124,7 +124,7 @@ export default function FashionFlashcardsPage() {
     if (currentFlashcard.index !== null) {
       setCurrentFlashcard({ ...currentArray[0], index: 0 });
     }
-  }, [currentArray, currentFlashcard.index]);
+  }, [currentArray]);
 
   return (
     <div className={styles['page-container']}>
